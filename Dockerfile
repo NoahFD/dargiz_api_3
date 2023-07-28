@@ -1,6 +1,3 @@
-#Set the base image
-FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
-
 # Build Stage
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
@@ -13,4 +10,4 @@ RUN dotnet publish -c Release -o out
 FROM mcr.microsoft.com/dotnet/aspnet:6.0
 WORKDIR /app
 COPY --from=build /src/out .
-ENTRYPOINT [ "dotnet", "WebApplication_4.dll" ]
+ENTRYPOINT [ "dotnet", "WebApplicsation_4.dll" ]
