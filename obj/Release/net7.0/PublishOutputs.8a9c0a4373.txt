@@ -1,0 +1,12 @@
+/Users/weipingtong/RiderProjects/WebApplication_4/WebApplication_4/bin/Release/net7.0/publish/WebApplication_4
+/Users/weipingtong/RiderProjects/WebApplication_4/WebApplication_4/bin/Release/net7.0/publish/appsettings.Development.json
+/Users/weipingtong/RiderProjects/WebApplication_4/WebApplication_4/bin/Release/net7.0/publish/appsettings.json
+/Users/weipingtong/RiderProjects/WebApplication_4/WebApplication_4/bin/Release/net7.0/publish/WebApplication_4.dll
+/Users/weipingtong/RiderProjects/WebApplication_4/WebApplication_4/bin/Release/net7.0/publish/WebApplication_4.deps.json
+/Users/weipingtong/RiderProjects/WebApplication_4/WebApplication_4/bin/Release/net7.0/publish/WebApplication_4.runtimeconfig.json
+/Users/weipingtong/RiderProjects/WebApplication_4/WebApplication_4/bin/Release/net7.0/publish/WebApplication_4.pdb
+/Users/weipingtong/RiderProjects/WebApplication_4/WebApplication_4/bin/Release/net7.0/publish/Microsoft.AspNetCore.OpenApi.dll
+/Users/weipingtong/RiderProjects/WebApplication_4/WebApplication_4/bin/Release/net7.0/publish/Microsoft.OpenApi.dll
+/Users/weipingtong/RiderProjects/WebApplication_4/WebApplication_4/bin/Release/net7.0/publish/Swashbuckle.AspNetCore.Swagger.dll
+/Users/weipingtong/RiderProjects/WebApplication_4/WebApplication_4/bin/Release/net7.0/publish/Swashbuckle.AspNetCore.SwaggerGen.dll
+/Users/weipingtong/RiderProjects/WebApplication_4/WebApplication_4/bin/Release/net7.0/publish/Swashbuckle.AspNetCore.SwaggerUI.dll
