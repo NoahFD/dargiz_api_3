@@ -45,7 +45,12 @@ public class CxmlController : ControllerBase
         var stringwriter = new System.IO.StringWriter();
         var serializer2 = new XmlSerializer(responseCxml.GetType());
         serializer2.Serialize(stringwriter, responseCxml);
-
-        return Ok(stringwriter.ToString());
+        
+        return new ContentResult
+        {
+            Content = stringwriter.ToString(),
+            ContentType = "application/xml",  // Here you specify the Content-Type
+            StatusCode = 200
+        };
     }
 }
