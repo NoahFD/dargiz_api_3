@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/weipingtong/RiderProjects/WebApplication_4 copy/WebApplication_4/WebApplication_4.csproj": {}
+    "/Users/weipingtong/RiderProjects/untitled folder/WebApplication_4/WebApplication_4.csproj": {}
   },
   "projects": {
-    "/Users/weipingtong/RiderProjects/WebApplication_4 copy/WebApplication_4/WebApplication_4.csproj": {
+    "/Users/weipingtong/RiderProjects/untitled folder/WebApplication_4/WebApplication_4.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/weipingtong/RiderProjects/WebApplication_4 copy/WebApplication_4/WebApplication_4.csproj",
+        "projectUniqueName": "/Users/weipingtong/RiderProjects/untitled folder/WebApplication_4/WebApplication_4.csproj",
         "projectName": "WebApplication_4",
-        "projectPath": "/Users/weipingtong/RiderProjects/WebApplication_4 copy/WebApplication_4/WebApplication_4.csproj",
+        "projectPath": "/Users/weipingtong/RiderProjects/untitled folder/WebApplication_4/WebApplication_4.csproj",
         "packagesPath": "/Users/weipingtong/.nuget/packages/",
-        "outputPath": "/Users/weipingtong/RiderProjects/WebApplication_4 copy/WebApplication_4/obj/",
+        "outputPath": "/Users/weipingtong/RiderProjects/untitled folder/WebApplication_4/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/weipingtong/.nuget/NuGet/NuGet.Config"
