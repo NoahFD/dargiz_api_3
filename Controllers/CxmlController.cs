@@ -1,7 +1,9 @@
 using System.Text;
+using System.Xml;
 using System.Xml.Serialization;
 using Microsoft.AspNetCore.Mvc;
 using WebApplication_4.Models;
+using WebApplication_4.Utilities;
 
 [Route("api/[controller]")]
 [ApiController]
@@ -9,7 +11,7 @@ public class CxmlController : ControllerBase
 {
     // POST: api/Cxml
     [HttpPost]
-    public async Task<ActionResult<string>> Post()
+    public async Task<IActionResult> Post()
     {
         using var reader = new StreamReader(HttpContext.Request.Body, Encoding.UTF8);
         var value = await reader.ReadToEndAsync();
@@ -42,10 +44,17 @@ public class CxmlController : ControllerBase
         };
 
         // Convert the object to an XML string
-        var stringwriter = new System.IO.StringWriter();
-        var serializer2 = new XmlSerializer(responseCxml.GetType());
-        serializer2.Serialize(stringwriter, responseCxml);
-        
+        var stringwriter = new Utf8StringWriter();
+        var settings = new XmlWriterSettings { Encoding = Encoding.UTF8, Indent = true };
+
+        using (var xmlWriter = XmlWriter.Create(stringwriter, settings))
+        {
+            xmlWriter.WriteDocType("cXML", null, "http://xml.cxml.org/schemas/cXML/1.2.048/cXML.dtd", null);
+
+            var serializer2 = new XmlSerializer(responseCxml.GetType());
+            serializer2.Serialize(xmlWriter, responseCxml);
+        }
+
         return new ContentResult
         {
             Content = stringwriter.ToString(),
