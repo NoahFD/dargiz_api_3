@@ -35,7 +35,7 @@ public class CxmlController : ControllerBase
                 {
                     StartPage = new StartPage
                     {
-                        URL = "https://fournisseurtech.com/PunchOutServlet/sessionid=7006"
+                        URL = "https://dargiz-api-3.onrender.com/api/cxml/sessionId=7006"
                     }
                 }
             }
