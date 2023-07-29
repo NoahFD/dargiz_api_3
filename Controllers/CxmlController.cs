@@ -25,7 +25,7 @@ public class CxmlController : ControllerBase
         var responseCxml = new Cxml
         {
             PayloadId = request.PayloadId,
-            Timestamp = DateTime.Now.ToString(),
+            Timestamp = DateTimeOffset.Now.ToString("yyyy-MM-ddTHH:mm:sszzz"),
             Response = new Response
             {
                 Status = new Status
@@ -51,8 +51,11 @@ public class CxmlController : ControllerBase
         {
             xmlWriter.WriteDocType("cXML", null, "http://xml.cxml.org/schemas/cXML/1.2.048/cXML.dtd", null);
 
+
             var serializer2 = new XmlSerializer(responseCxml.GetType());
-            serializer2.Serialize(xmlWriter, responseCxml);
+            var ns = new XmlSerializerNamespaces();
+            ns.Add("", ""); // This line removes the xmlns:xsi and xmlns:xsd lines.
+            serializer2.Serialize(xmlWriter, responseCxml,ns);
         }
 
         return new ContentResult
