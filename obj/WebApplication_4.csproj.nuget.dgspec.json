@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/weipingtong/RiderProjects/untitled folder/WebApplication_4/WebApplication_4.csproj": {}
+    "/Users/weipingtong/Desktop/Dargiz/dargiz_api_3/WebApplication_4.csproj": {}
   },
   "projects": {
-    "/Users/weipingtong/RiderProjects/untitled folder/WebApplication_4/WebApplication_4.csproj": {
+    "/Users/weipingtong/Desktop/Dargiz/dargiz_api_3/WebApplication_4.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/weipingtong/RiderProjects/untitled folder/WebApplication_4/WebApplication_4.csproj",
+        "projectUniqueName": "/Users/weipingtong/Desktop/Dargiz/dargiz_api_3/WebApplication_4.csproj",
         "projectName": "WebApplication_4",
-        "projectPath": "/Users/weipingtong/RiderProjects/untitled folder/WebApplication_4/WebApplication_4.csproj",
+        "projectPath": "/Users/weipingtong/Desktop/Dargiz/dargiz_api_3/WebApplication_4.csproj",
         "packagesPath": "/Users/weipingtong/.nuget/packages/",
-        "outputPath": "/Users/weipingtong/RiderProjects/untitled folder/WebApplication_4/obj/",
+        "outputPath": "/Users/weipingtong/Desktop/Dargiz/dargiz_api_3/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/weipingtong/.nuget/NuGet/NuGet.Config"
@@ -39,6 +39,10 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
+              "target": "Package",
+              "version": "[7.0.10, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[7.0.8, )"

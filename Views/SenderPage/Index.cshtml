@@ -1,0 +1,23 @@
+@model dynamic
+
+@{
+    Layout = null;  // Assuming you don't want to use a shared layout.
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Simple Submit Button</title>
+</head>
+<body>
+<form action="/SenderPage/ProductToSync" method="post">
+    <div class="card-footer">
+        <button type="submit" name="save" value="Submit">
+            Submit
+        </button>
+    </div>
+
+</form>
+</body>
+</html>
