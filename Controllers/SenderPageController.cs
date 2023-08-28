@@ -25,8 +25,7 @@ public class SenderPageController : Controller
         if (Request.Form.ContainsKey("save"))
         {
             // Handle the logic when "save" button is pressed
-            
-            return Content("Form saved!");
+            return Content("Saved");
         }
         Console.WriteLine("HI");
         // If the form doesn't contain "save", return the same view.

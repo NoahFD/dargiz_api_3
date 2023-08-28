@@ -9,6 +9,9 @@ public class Response
 
     [XmlElement(ElementName = "PunchOutSetupResponse")]
     public PunchOutSetupResponse PunchOutSetupResponse { get; set; }
+    
+    [XmlElement(ElementName = "PunchOutOrderMessage")]
+    public PunchOutOrderMessage PunchOutOrderMessage { get; set; }
 }
 
 public class Status
@@ -32,3 +35,95 @@ public class StartPage
     public string URL { get; set; }
 }
 
+public class Message
+{
+    [XmlElement(ElementName = "PunchOutOrderMessage")]
+    public PunchOutOrderMessage PunchOutOrderMessage { get; set; }
+}
+
+public class PunchOutOrderMessage
+{
+    [XmlElement(ElementName = "BuyerCookie")]
+    public string BuyerCookie { get; set; }
+
+    [XmlElement(ElementName = "PunchOutOrderMessageHeader")]
+    public PunchOutOrderMessageHeader PunchOutOrderMessageHeader { get; set; }
+
+    [XmlElement(ElementName = "ItemIn")]
+    public ItemIn ItemIn { get; set; }
+}
+
+public class PunchOutOrderMessageHeader
+{
+    [XmlAttribute(AttributeName = "operationAllowed")]
+    public string OperationAllowed { get; set; }
+
+    [XmlElement(ElementName = "Total")]
+    public Total Total { get; set; }
+}
+
+public class Total
+{
+    [XmlElement(ElementName = "Money")]
+    public Money Money { get; set; }
+}
+
+public class Money
+{
+    [XmlAttribute(AttributeName = "currency")]
+    public string Currency { get; set; }
+
+    [XmlText]
+    public decimal Value { get; set; }
+}
+
+public class ItemIn
+{
+    [XmlAttribute(AttributeName = "quantity")]
+    public int Quantity { get; set; }
+
+    [XmlElement(ElementName = "ItemID")]
+    public ItemID ItemID { get; set; }
+
+    [XmlElement(ElementName = "ItemDetail")]
+    public ItemDetail ItemDetail { get; set; }
+}
+
+public class ItemDetail
+{
+    [XmlElement(ElementName = "UnitPrice")]
+    public UnitPrice UnitPrice { get; set; }
+    
+    [XmlElement(ElementName = "Description")]
+    public Description Description { get; set; }
+    [XmlElement(ElementName = "UnitOfMeasure")]
+    public string UnitOfMeasure { get; set; }
+    [XmlElement(ElementName = "Classification")]
+    public Classification Classification { get; set; }
+    [XmlElement(ElementName = "LeadTime")]
+    public long LeadTime { get; set; }
+    // ... other elements (Description, UnitOfMeasure, etc.)
+}
+
+public class UnitPrice
+{
+    [XmlElement(ElementName = "Money")]
+    public Money Money { get; set; }
+}
+
+
+public class Description 
+{
+    [XmlAttribute(AttributeName = "xml:lang")]
+    public string XmlLang { get; set; }
+    [XmlElement(ElementName = "DescriptionValue")]
+    public string DescriptionValue { get; set; }
+}
+
+public class Classification 
+{
+    [XmlAttribute(AttributeName = "domain")]
+    public string Domain { get; set; }
+    [XmlElement(ElementName = "ClassificationValue")]
+    public long ClassificationValue { get; set; }
+}
