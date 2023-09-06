@@ -4,11 +4,19 @@ using System.Xml.Serialization;
 using Microsoft.AspNetCore.Mvc;
 using WebApplication_4.Models;
 using WebApplication_4.Utilities;
+using Microsoft.Extensions.Caching.Memory;
 
 [Route("api/[controller]")]
 [ApiController]
 public class CxmlController : ControllerBase
 {
+    
+    private readonly IMemoryCache _memoryCache;
+    
+    public CxmlController(IMemoryCache memoryCache)
+    {
+        _memoryCache = memoryCache;
+    }
     // POST: api/Cxml
     [HttpPost]
     public async Task<IActionResult> Post()
@@ -28,6 +36,9 @@ public class CxmlController : ControllerBase
         if(!string.IsNullOrEmpty(browserFormPostUrl))
         {
             // Do something with the URL
+            Console.WriteLine(browserFormPostUrl);
+            // Store the URL in cache with a unique key
+            _memoryCache.Set("BrowserFormPostUrl", browserFormPostUrl, TimeSpan.FromHours(1)); // Store for 1 hour
             Console.WriteLine(browserFormPostUrl);
         }
         else
