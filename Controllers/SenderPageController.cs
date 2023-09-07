@@ -42,7 +42,12 @@ public class SenderPageController : Controller
                 // Use the cached URL
                 Console.WriteLine("Cached BrowserFormPost URL From My BROWSER: " + cachedUrl);
             }
-            return Content(cachedUrl);
+
+            if (_memoryCache.TryGetValue("BuyerCookie", out string buyerCookie))
+            {
+                Console.WriteLine("Cached buyerCookie From My BROWSER: "+ buyerCookie);
+            }
+            return Content(buyerCookie);
         }
         Console.WriteLine("HI");
         // If the form doesn't contain "save", return the same view.

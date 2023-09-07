@@ -38,8 +38,10 @@ public class CxmlController : ControllerBase
             // Do something with the URL
             Console.WriteLine(browserFormPostUrl);
             // Store the URL in cache with a unique key
+            _memoryCache.Set("BuyerCookie", request.Request.PunchOutSetupRequest.BuyerCookie, TimeSpan.FromHours(1)); 
             _memoryCache.Set("BrowserFormPostUrl", browserFormPostUrl, TimeSpan.FromHours(1)); // Store for 1 hour
             Console.WriteLine(browserFormPostUrl);
+            Console.WriteLine("Buyer Cookie: "+ request.Request.PunchOutSetupRequest.BuyerCookie);
         }
         else
         {
