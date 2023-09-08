@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "okF32Hv7WTRE5a2RDP7glDNnWmPD0Ox+kob2Ydq/3WoyyyBQY8W0mXAUufwwzuqqYXkp4L5/dHxGeWFMCBIyjQ==",
+  "dgSpecHash": "J1qhOI9BSTWhy/9//mjJ954NncXIbDAMOFMuBIvHyChlQ1FUiJ7xN0GHMzaLRoRfbZqqX3B7p2kStu+y5pxRlw==",
   "success": true,
-  "projectFilePath": "/Users/weipingtong/Desktop/Dargiz/dargiz_api_3/WebApplication_4.csproj",
+  "projectFilePath": "/Users/weipingtong/Desktop/Dargiz/dargiz_api/dargiz_api_3/WebApplication_4.csproj",
   "expectedPackageFiles": [
     "/Users/weipingtong/.nuget/packages/microsoft.aspnetcore.mvc.razor.extensions/6.0.0/microsoft.aspnetcore.mvc.razor.extensions.6.0.0.nupkg.sha512",
     "/Users/weipingtong/.nuget/packages/microsoft.aspnetcore.mvc.razor.runtimecompilation/7.0.10/microsoft.aspnetcore.mvc.razor.runtimecompilation.7.0.10.nupkg.sha512",

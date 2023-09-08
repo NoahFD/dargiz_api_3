@@ -1,17 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
-using System.Text.Encodings.Web;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Caching.Memory; // Add this using statement
-using System;
-using System.Threading.Tasks;
-using System.Net.Http;
+using Microsoft.Extensions.Caching.Memory;
 using System.Text;
 using System.Xml;
 using System.Xml.Serialization;
-using Microsoft.AspNetCore.Mvc;
 using WebApplication_4.Models;
-using WebApplication_4.Utilities;
-using Microsoft.Extensions.Caching.Memory;
 
 namespace WebApplication_4.Controllers;
 [ApiController]
