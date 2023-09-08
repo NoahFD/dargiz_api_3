@@ -68,7 +68,7 @@ public class SenderPageController : Controller
 
             var responseString = await response.Content.ReadAsStringAsync();
             Console.WriteLine(responseString);
-            return Content(xmlString);
+            return Content(xmlString+"-----------"+responseString);
         }
         Console.WriteLine("HI");
         // If the form doesn't contain "save", return the same view.
