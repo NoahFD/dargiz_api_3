@@ -124,9 +124,9 @@ public class SenderPageController : Controller
                             UnitOfMeasure = "EA",
                             Classification = new Classification {
                                 Domain = "SPSC",
-                                ClassificationValue = 12345
+                                ClassificationValue = "12345"
                             },
-                            LeadTime = 1
+                            LeadTime = "1"
                         }
                     }
                 }
@@ -215,9 +215,12 @@ public Cxml GeneratePunchOutOrderMessage2(string buyerCookieValue)
                         Classification = new Classification
                         {
                             Domain = "UNSPSC",
-                            ClassificationValue = 43211503
+                            ClassificationValue = "43211503"
                         },
-                        LeadTime = 8
+                        ManufacturerPartID = "Manufacturer_ID_1",
+                        ManufacturerName = "Tricolore",
+                        LeadTime = "8",
+                     
                     }
                 }
             }

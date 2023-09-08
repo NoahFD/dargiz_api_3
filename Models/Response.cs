@@ -101,7 +101,12 @@ public class ItemDetail
     [XmlElement(ElementName = "Classification")]
     public Classification Classification { get; set; }
     [XmlElement(ElementName = "LeadTime")]
-    public long LeadTime { get; set; }
+    public string LeadTime { get; set; }
+    [XmlElement(ElementName = "ManufacturerPartID")]
+    public string ManufacturerPartID { get; set; }
+    [XmlElement(ElementName = "ManufacturerName ")]
+    public string ManufacturerName  { get; set; }
+    
     // ... other elements (Description, UnitOfMeasure, etc.)
 }
 
@@ -116,7 +121,7 @@ public class Description
 {
     [XmlAttribute(AttributeName = "xml:lang")]
     public string XmlLang { get; set; }
-    [XmlElement(ElementName = "DescriptionValue")]
+    [XmlText]
     public string DescriptionValue { get; set; }
 }
 
@@ -125,5 +130,5 @@ public class Classification
     [XmlAttribute(AttributeName = "domain")]
     public string Domain { get; set; }
     [XmlElement(ElementName = "ClassificationValue")]
-    public long ClassificationValue { get; set; }
+    public string ClassificationValue { get; set; }
 }

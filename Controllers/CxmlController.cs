@@ -149,9 +149,9 @@ public class CxmlController : ControllerBase
                             UnitOfMeasure = "EA",
                             Classification = new Classification {
                                 Domain = "SPSC",
-                                ClassificationValue = 12345
+                                ClassificationValue = "12345"
                             },
-                            LeadTime = 1
+                            LeadTime = "1"
                         }
                     }
                 }
