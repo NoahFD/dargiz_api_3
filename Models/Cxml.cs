@@ -15,6 +15,8 @@ public class Cxml
     public string PayloadId { get; set; }
     [XmlAttribute(AttributeName = "timestamp")]
     public string Timestamp { get; set; }
+    [XmlElement(ElementName = "Message")]
+    public Message Message { get; set; }
 }
 
 public class Header
@@ -22,7 +24,7 @@ public class Header
     [XmlElement(ElementName = "From")]
     public From From { get; set; }
     [XmlElement(ElementName = "To")]
-    public List<To> To { get; set; }
+    public To To { get; set; }
     [XmlElement(ElementName = "Sender")]
     public Sender Sender { get; set; }
 }
@@ -53,6 +55,9 @@ public class Credential
     public string Identity { get; set; }
     [XmlAttribute(AttributeName = "domain")]
     public string Domain { get; set; }
+    [XmlAttribute(AttributeName = "SharedSecret")]
+    public string SharedSecret { get; set; }
+    
 }
 
 public class Request

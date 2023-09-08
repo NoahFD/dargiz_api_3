@@ -55,7 +55,7 @@ public class SenderPageController : Controller
                 Console.WriteLine("Cached buyerCookie From My BROWSER: "+ buyerCookie);
             }
             
-            var xmlString = ConvertToXml(GeneratePunchOutOrderMessage(buyerCookie));
+            var xmlString = ConvertToXml(GeneratePunchOutOrderMessage2(buyerCookie));
             Console.WriteLine(xmlString);
             var values = new Dictionary<string, string>
             {
@@ -138,5 +138,93 @@ public class SenderPageController : Controller
 
     }
         
+public Cxml GeneratePunchOutOrderMessage2(string buyerCookieValue)
+{
+    var responseCxml = new Cxml
+    {
+        Header = new Header
+        {
+            From = new From
+            {
+                Credential = new Credential
+                {
+                    Domain = "NetworkID",
+                    Identity = "AN11134525901-T"
+                }
+            },
+            To = new To
+            {
+                Credential = new Credential
+                {
+                    Domain = "NetworkID",
+                    Identity = "AN01039381835-T"
+                }
+            },
+            Sender = new Sender
+            {
+                Credential = new Credential
+                {
+                    Domain = "www.marketforgood.net.com",
+                    Identity = "PunchoutResponse",
+                    SharedSecret = "marketforgood"
+                },
+                UserAgent = "Our PunchOut Site V4.2"
+            }
+        },
+        Message = new Message
+        {
+            PunchOutOrderMessage = new PunchOutOrderMessage
+            {
+                BuyerCookie = buyerCookieValue,
+                PunchOutOrderMessageHeader = new PunchOutOrderMessageHeader
+                {
+                    OperationAllowed = "edit",
+                    Total = new Total
+                    {
+                        Money = new Money
+                        {
+                            Currency = "USD",
+                            Value = 999
+                        }
+                    }
+                },
+                ItemIn = new ItemIn
+                {
+                    Quantity = 2,
+                    ItemID = new ItemID
+                    {
+                        SupplierPartID = "laptop_1",
+                        SupplierPartAuxiliaryID = "white"
+                    },
+                    ItemDetail = new ItemDetail
+                    {
+                        UnitPrice = new UnitPrice
+                        {
+                            Money = new Money
+                            {
+                                Currency = "USD",
+                                Value = 499
+                            }
+                        },
+                        Description = new Description
+                        {
+                            XmlLang = "en",
+                            DescriptionValue = "SuperBook ABC Laptop"
+                        },
+                        UnitOfMeasure = "EA",
+                        Classification = new Classification
+                        {
+                            Domain = "UNSPSC",
+                            ClassificationValue = 43211503
+                        },
+                        LeadTime = 8
+                    }
+                }
+            }
+        }
+    };
+
+    return responseCxml;
+}
 
 }
