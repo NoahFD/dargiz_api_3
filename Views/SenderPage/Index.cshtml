@@ -1,3 +1,4 @@
+@using Microsoft.Extensions.Caching.Memory
 @model dynamic
 
 @{
@@ -11,13 +12,13 @@
     <title>Simple Submit Button</title>
 </head>
 <body>
-<form action="/SenderPage/ProductToSync" method="post">
+<form id="cxml_form" action="/SenderPage/ProductToSync" method="post" enctype="application/x-www-form-urlencoded">
     <div class="card-footer">
         <button type="submit" name="save" value="Submit">
             Submit
         </button>
     </div>
-
 </form>
 </body>
 </html>
+<script type="text/javascript">document.getElementById('cxml_form').submit()</script>
